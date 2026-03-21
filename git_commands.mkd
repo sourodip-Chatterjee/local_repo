@@ -1,0 +1,365 @@
+# 🚀 Git Commands Cheat Sheet (For VS Code + Real Understanding)
+
+> This guide is written to make you **actually understand Git**, not just memorize commands.
+
+---
+
+## 🧠 First — What is Git?
+
+Git is a **version control system**.
+
+It helps you:
+
+- Track file changes
+- Go back to previous versions
+- Work on features safely
+- Collaborate with others
+- Push your code to GitHub / remote
+
+---
+
+## 🌍 Important Git Areas (VERY IMPORTANT)
+
+You must understand these 3 areas clearly:
+
+```
+Working Directory → Staging Area → Repository
+```
+
+| Area              | Meaning                     |
+| ----------------- | --------------------------- |
+| Working Directory | Your actual project files   |
+| Staging Area      | Files you marked for commit |
+| Repository        | Saved snapshot (history)    |
+
+---
+
+## ✅ 1. Check Git Installed
+
+```
+git --version
+```
+
+---
+
+## ✅ 2. Configure Git (First Time Only)
+
+```
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+```
+
+Check config:
+
+```
+git config --list
+```
+
+---
+
+## ✅ 3. Initialize Git Repo
+
+Inside project folder:
+
+```
+git init
+```
+
+This creates `.git` folder → now project is tracked.
+
+---
+
+## ✅ 4. Check Status (MOST USED COMMAND)
+
+```
+git status
+```
+
+Shows:
+
+- modified files
+- staged files
+- untracked files
+
+---
+
+## ✅ 5. Add Files to Staging
+
+Add single file:
+
+```
+git add filename
+```
+
+Add all files:
+
+```
+git add .
+```
+
+---
+
+## ✅ 6. Commit (Save Snapshot)
+
+```
+git commit -m "message"
+```
+
+Example:
+
+```
+git commit -m "Added login page UI"
+```
+
+---
+
+## ✅ 7. See Commit History
+
+```
+git log
+```
+
+Cleaner:
+
+```
+git log --oneline
+```
+
+---
+
+## ✅ 8. Connect to Remote (GitHub)
+
+First create repo on GitHub.
+
+Then:
+
+```
+git remote add origin <repo-url>
+```
+
+Check remote:
+
+```
+git remote -v
+```
+
+---
+
+## ✅ 9. Push Code to GitHub
+
+First push:
+
+```
+git push -u origin main
+```
+
+Later pushes:
+
+```
+git push
+```
+
+---
+
+## ✅ 10. Clone Existing Repo
+
+```
+git clone <repo-url>
+```
+
+---
+
+## ✅ 11. Pull Latest Changes
+
+```
+git pull
+```
+
+This = fetch + merge.
+
+---
+
+## ✅ 12. Fetch Only (Safe)
+
+```
+git fetch
+```
+
+Downloads changes but **does NOT merge.**
+
+---
+
+## ✅ 13. Create Branch
+
+```
+git branch branch_name
+```
+
+---
+
+## ✅ 14. Switch Branch
+
+```
+git checkout branch_name
+```
+
+Modern way:
+
+```
+git switch branch_name
+```
+
+---
+
+## ✅ 15. Create + Switch Branch (Best)
+
+```
+git checkout -b feature-login
+```
+
+OR
+
+```
+git switch -c feature-login
+```
+
+---
+
+## ✅ 16. Merge Branch
+
+Go to main:
+
+```
+git switch main
+```
+
+Then:
+
+```
+git merge feature-login
+```
+
+---
+
+## ✅ 17. Delete Branch
+
+```
+git branch -d branch_name
+```
+
+---
+
+## ✅ 18. Undo Staging
+
+```
+git restore --staged filename
+```
+
+---
+
+## ✅ 19. Undo File Changes
+
+```
+git restore filename
+```
+
+---
+
+## ✅ 20. Reset Commit (Danger Zone)
+
+Soft reset:
+
+```
+git reset --soft HEAD~1
+```
+
+Hard reset:
+
+```
+git reset --hard HEAD~1
+```
+
+---
+
+## ✅ 21. See Differences
+
+```
+git diff
+```
+
+---
+
+## ✅ 22. Ignore Files
+
+Create `.gitignore`
+
+Example:
+
+```
+node_modules/
+.env
+*.log
+```
+
+---
+
+## ⚡ Real VS Code Workflow (What YOU should do)
+
+1. Open folder in VS Code
+2. Terminal:
+
+```
+git init
+git add .
+git commit -m "initial commit"
+```
+
+3. Create GitHub repo
+4.
+
+```
+git remote add origin URL
+git push -u origin main
+```
+
+After that daily:
+
+```
+git add .
+git commit -m "work update"
+git push
+```
+
+---
+
+## 🧠 Pro Tips (Freshers Don't Know)
+
+### ⭐ Commit small changes
+
+Not 1000 lines at once.
+
+### ⭐ Always check `git status`
+
+### ⭐ Use branches for features
+
+### ⭐ Never use `--hard` randomly
+
+### ⭐ Learn conflict solving (later)
+
+---
+
+## 🔥 Golden Mental Model
+
+```
+EDIT → ADD → COMMIT → PUSH
+```
+
+---
+
+If you want next, I can make:
+
+✅ **REAL Git workflow diagram (project based)**
+✅ **Git mistakes freshers make (you WILL relate)**
+✅ **GitHub + Branching strategy for portfolio projects**
+
+Just tell.
